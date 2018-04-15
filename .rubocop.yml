@@ -1,0 +1,38 @@
+# Missing magic comment # frozen_string_literal: true. を無視
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# 自動生成されるものはチェック対象から除外する
+AllCops:
+  Exclude:
+    - "vendor/**/*" # rubocop config/default.yml
+    - "db/schema.rb"
+  DisplayCopNames: true
+
+# 日本語のコメントを許可する
+Style/AsciiComments:
+  Enabled: false
+
+# 文字列はダブルクオートにする
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+# 1行の長さは160まで
+Metrics/LineLength:
+  Max: 160
+  Exclude:
+    - "db/migrate/*.rb"
+
+# ドキュメントの無い public class を許可する
+Style/Documentation:
+  Enabled: false
+
+# com名を表示
+AllCops:
+  DisplayCopNames: true
+
+Layout/SpaceBeforeFirstArg:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
