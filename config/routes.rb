@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   resources :user
   scope module: :task do
-    resources :board, only: [:new, :create, :index, :show]
+    resources :board, only: %i[new create index show]
   end
 end

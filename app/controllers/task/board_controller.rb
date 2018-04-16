@@ -12,8 +12,7 @@ class Task::BoardController < ApplicationController
     end
   end
 
-  def index
-  end
+  def index; end
 
   def show
     @board = Task::Board.find(params[:id])
@@ -21,7 +20,7 @@ class Task::BoardController < ApplicationController
 
   private
 
-    def board_params
-      params.require(:task_board).permit(:name)
-    end
+  def board_params
+    params.require(:task_board).permit(:name)
+  end
 end

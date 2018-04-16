@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 describe Task::BoardController, type: :controller do
   describe "#new" do
@@ -23,8 +23,8 @@ describe Task::BoardController, type: :controller do
   describe "#show" do
     context "success" do
       let(:board) { create(:task_board) }
-      
-      before { get :show, params:{id: board.id} }
+
+      before { get :show, params: { id: board.id } }
       it :aggrigate_failure do
         expect(response).to render_template "show"
         expect(assigns(:board).name).to eq board.name
