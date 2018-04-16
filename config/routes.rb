@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   root "top#show"
 
   resources :user
-  resources :board, only: [:new, :create, :index, :show]
+  scope module: :task do
+    resources :board, only: [:new, :create, :index, :show]
+  end
 end

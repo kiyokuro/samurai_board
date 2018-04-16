@@ -1,4 +1,4 @@
-class BoardController < ApplicationController
+class Task::BoardController < ApplicationController
   def new
     @board = Task::Board.new
   end
@@ -16,11 +16,12 @@ class BoardController < ApplicationController
   end
 
   def show
+    @board = Task::Board.find(params[:id])
   end
 
   private
 
     def board_params
-      params.require(:board).parmit(:name)
+      params.require(:task_board).permit(:name)
     end
 end
