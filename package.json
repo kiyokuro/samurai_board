@@ -1,5 +1,7 @@
 {
   "name": "samurai_borad",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "chart.js": "^2.7.1"
+  }
 }
