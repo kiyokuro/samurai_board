@@ -17,6 +17,7 @@ class Task::BoardController < ApplicationController
 
   def show
     @board = Task::Board.find(params[:id])
+    @point = @board.points
   end
 
   private

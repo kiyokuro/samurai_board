@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_180_415_155_944) do
+ActiveRecord::Schema.define(version: 20180429092618) do
+
   create_table "task_boards", force: :cascade do |t|
     t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "task_finished_points", force: :cascade do |t|
+    t.integer "board_id", null: false
+    t.integer "point", null: false
+    t.date "finish_day", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -23,4 +32,5 @@ ActiveRecord::Schema.define(version: 20_180_415_155_944) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
 end
