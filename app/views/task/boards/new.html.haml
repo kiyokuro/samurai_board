@@ -2,7 +2,9 @@ form
 = form_for @board_form, url: { action: "create" } do |f|
   = f.label :name
   = f.text_field :name
-  = f.label :point
-  = f.number_field :point
+  = f.label :total_point
+  = f.number_field :total_point
+  = f.label :release_day
+  = f.date_field :release_day
 
   = f.submit

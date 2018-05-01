@@ -1,4 +1,4 @@
-class Task::BoardController < ApplicationController
+class Task::BoardsController < ApplicationController
   def new
     @board_form = Task::BoardForm.new
   end
@@ -23,6 +23,6 @@ class Task::BoardController < ApplicationController
   private
 
   def board_params
-    params.require(:task_board_form).permit(:name, :point)
+    params.require(:task_board_form).permit(:name, :release_day, :total_point)
   end
 end

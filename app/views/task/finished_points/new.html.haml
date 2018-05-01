@@ -1,0 +1,7 @@
+= form_with model: @finished_point, url: board_finished_points_path do |f|
+  = f.label :point
+  = f.number_field :point
+  = f.label :finish_day
+  = f.date_field :finish_day
+
+  = f.submit
