@@ -10,14 +10,14 @@
           labels: #{@label_of_day},
           datasets: [{
               label: "finished points",
-              data: #{@points},
+              data: #{@finished_points},
               backgroundColor: 'rgba(255, 99, 132, 1.0)',
               borderColor: 'rgba(255, 50, 132, 1.0)',
               fill: false
           },
           {
               label: "all task pointss",
-              data: [7],
+              data: #{@total_points},
               type: 'line',
               backgroundColor: 'rgba(255, 99, 132, 1.0)',
               borderColor: 'rgba(255, 50, 132, 1.0)',
