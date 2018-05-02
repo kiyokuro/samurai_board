@@ -17,7 +17,8 @@ class Task::BoardsController < ApplicationController
 
   def show
     @board = Task::Board.find(params[:id])
-    @point = @board.points
+    @points = @board.points.map(&:total_point)
+    @label_of_day = @board.finished_points.order(:finish_day).map {|day| day.finish_day.to_s }.to_json.html_safe
   end
 
   private
