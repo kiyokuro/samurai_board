@@ -1,5 +1,5 @@
 module Task
-  class Point < ApplicationRecord
+  class TotalPoint < ApplicationRecord
     belongs_to :board
   end
 end

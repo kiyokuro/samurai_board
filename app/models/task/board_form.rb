@@ -6,7 +6,7 @@ class Task::BoardForm
 
   def save
     @board = Task::Board.new(name: name, release_day: release_day)
-    @board.points.build(total_point: total_point)
+    @board.total_points.build(total_point: total_point, change_day: Date.today)
     @board.save
   end
 end

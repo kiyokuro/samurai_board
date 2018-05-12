@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180501063801) do
+ActiveRecord::Schema.define(version: 20180504091438) do
 
   create_table "task_boards", force: :cascade do |t|
     t.string "name", null: false
@@ -27,11 +27,12 @@ ActiveRecord::Schema.define(version: 20180501063801) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "task_points", force: :cascade do |t|
+  create_table "task_total_points", force: :cascade do |t|
     t.integer "board_id", null: false
     t.integer "total_point", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "change_day", null: false
   end
 
 end
