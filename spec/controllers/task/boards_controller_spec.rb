@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe Task::BoardController, type: :controller do
+describe Task::BoardsController, type: :controller do
   describe "#new" do
     context "success" do
       before { get :new }
@@ -10,10 +10,13 @@ describe Task::BoardController, type: :controller do
 
   describe "#create" do
     context "success" do
-      let(:params) { attributes_for(:task_board) }
-      before { post :create, params: { task_board: params } }
+      # let(:params) { attributes_for(:task_board) }
+      let(:board_name) { "サムライボード" }
+      let(:release_day) { "2000-01-01" }
+      let(:total_point) { 50 }
+      before { post :create, params: { task_board_form: { name: board_name, release_day: release_day, total_point: total_point } } }
 
-      it { expect(response).to redirect_to board_path assigns[:board].id }
+      it { expect(response).to redirect_to board_path assigns[:board_form].board }
     end
 
     context "failure" do
