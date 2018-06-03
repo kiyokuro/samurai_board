@@ -1,0 +1,6 @@
+= link_to "create new task card", new_board_card_path
+%p "task total points are #{@board.card_total_points}"
+%p "task card list"
+%ul
+  - @cards.each do |card|
+    %li= link_to card.title, board_card_path(id: card.id)

@@ -1,0 +1,9 @@
+= form_with model: @card, url: board_cards_path(@board) do |f|
+  = f.label :title
+  = f.text_field :title
+  = f.label :description
+  = f.text_field :description
+  = f.label :point
+  = f.number_field :point
+
+  = f.submit
