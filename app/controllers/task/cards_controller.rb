@@ -1,8 +1,8 @@
 module Task
   class CardsController < ApplicationController
     def index
-      board = Task::Board.find params[:board_id]
-      @cards = board.cards
+      @board = Task::Board.find params[:board_id]
+      @cards = @board.cards
     end
 
     def show
