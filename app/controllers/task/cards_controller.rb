@@ -10,12 +10,13 @@ module Task
     end
 
     def new
+      @board = Task::Board.find params[:board_id]
       @card = Task::Card.new
     end
 
     def create
       board = Task::Board.find params[:board_id]
-      board.card.build card_params
+      board.cards.build card_params
       if board.save
         redirect_to board_path(params[:board_id])
       else
