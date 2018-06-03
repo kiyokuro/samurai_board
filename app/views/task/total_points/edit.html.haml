@@ -1,5 +1,5 @@
-= form_for @total_point, board_path do |f|
+= form_with model: @total_point, url: board_total_point_path do |f|
   = f.label :total_point
-  = f.date_field :total_point
+  = f.number_field :total_point
 
   = f.submit
