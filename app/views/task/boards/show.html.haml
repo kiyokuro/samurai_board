@@ -1,5 +1,6 @@
 = @board.name
 = link_to("input todays finished point", new_board_finished_point_path(board_id: @board.id))
+= link_to("update total point", edit_board_total_point_path)
 = link_to("task_cards_list", board_cards_path(@board.id))
 
 <canvas id="myChart" width="900" height="400"></canvas>
